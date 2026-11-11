@@ -173,7 +173,7 @@ const RecepcaoMockup = () => {
 
       <div
         ref={chatContainerRef}
-        className="flex-1 p-4 overflow-y-auto bg-background/50 flex flex-col justify-start relative text-[11px] gap-3.5 scrollbar-none pb-24"
+        className="flex-1 p-4 overflow-y-auto overscroll-contain bg-background/50 flex flex-col justify-start relative text-[11px] gap-3.5 scrollbar-none pb-24"
       >
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(hsl(var(--foreground)) 1px, transparent 1px)", backgroundSize: "16px 16px" }} />
 
@@ -315,7 +315,7 @@ const FollowUpMockup = () => {
 
       {/* Rodapé do mockup */}
       <div className="p-3 bg-muted/20 border-t border-border flex items-center justify-center shrink-0 z-10">
-        <button className="w-full bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary)/0.9)] text-primary-foreground font-bold py-2.5 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 text-[11px] transition-all">
+        <button className="w-full bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary)/0.9)] active:scale-[0.98] text-primary-foreground font-bold py-2.5 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 text-[11px] transition-all duration-150 ease-out">
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Ver Fluxo Completo</span>
         </button>

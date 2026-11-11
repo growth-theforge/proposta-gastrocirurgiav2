@@ -642,12 +642,12 @@ const IAModal = ({ onClose }: { onClose: () => void }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
       <div className="absolute inset-0 bg-white/80 backdrop-blur-lg transition-opacity animate-fade-in" onClick={onClose} />
 
-      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90vh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
+      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90dvh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto overscroll-contain lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
 
         {/* LEFT COLUMN */}
-        <div className="flex-[1] flex flex-col justify-between p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)] relative overflow-y-auto">
+        <div className="flex-[1] flex flex-col justify-between p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)] relative lg:overflow-y-auto lg:overscroll-contain">
 
-          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm font-bold transition-colors">
+          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground active:scale-[0.97] flex items-center gap-2 text-sm font-bold transition-all duration-150 ease-out">
             <ArrowLeft className="w-4 h-4" /> Voltar
           </button>
 
@@ -809,12 +809,12 @@ const FollowUpModal = ({ onClose }: { onClose: () => void }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
       <div className="absolute inset-0 bg-white/80 backdrop-blur-lg transition-opacity animate-fade-in" onClick={onClose} />
 
-      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90vh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
+      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90dvh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto overscroll-contain lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
 
         {/* LEFT COLUMN */}
-        <div className="flex-[1] flex flex-col justify-between p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)] relative overflow-y-auto">
+        <div className="flex-[1] flex flex-col justify-between p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)] relative lg:overflow-y-auto lg:overscroll-contain">
 
-          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm font-bold transition-colors">
+          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground active:scale-[0.97] flex items-center gap-2 text-sm font-bold transition-all duration-150 ease-out">
             <ArrowLeft className="w-4 h-4" /> Voltar
           </button>
 
@@ -971,7 +971,7 @@ const DefaultSolutionModal = ({ solution, onClose }: { solution: typeof solution
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
       <div className="absolute inset-0 bg-white/80 backdrop-blur-lg transition-opacity animate-fade-in" onClick={onClose} />
-      <div className="relative z-10 w-full max-w-5xl min-h-0 sm:min-h-[600px] lg:min-h-[650px] bg-card border border-border rounded-3xl shadow-2xl overflow-y-auto md:overflow-hidden flex flex-col md:flex-row max-h-[90vh] animate-fade-in">
+      <div className="relative z-10 w-full max-w-5xl min-h-0 sm:min-h-[600px] lg:min-h-[650px] bg-card border border-border rounded-3xl shadow-2xl overflow-y-auto overscroll-contain md:overflow-hidden flex flex-col md:flex-row max-h-[90dvh] animate-fade-in">
 
         {/* Left: Text & Context */}
         <div className="flex-1 flex flex-col justify-center p-8 md:p-14 lg:p-16 border-b md:border-b-0 md:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)]">
@@ -983,7 +983,7 @@ const DefaultSolutionModal = ({ solution, onClose }: { solution: typeof solution
           <p className="text-base text-muted-foreground leading-relaxed border-l-2 border-[hsl(var(--primary))] pl-4">
             {solution.modalContent.subtitle}
           </p>
-          <button onClick={onClose} className="mt-10 self-start px-6 py-3 bg-secondary text-secondary-foreground hover:bg-muted font-bold text-sm rounded-xl transition-colors">
+          <button onClick={onClose} className="mt-10 self-start px-6 py-3 bg-secondary text-secondary-foreground hover:bg-muted active:scale-[0.97] font-bold text-sm rounded-xl transition-all duration-150 ease-out">
             Voltar para Soluções
           </button>
         </div>
@@ -1144,11 +1144,11 @@ const LembretesModal = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
       <div className="absolute inset-0 bg-white/80 backdrop-blur-lg animate-fade-in" onClick={onClose} />
-      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90vh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
+      <div className="relative z-10 w-full max-w-6xl min-h-0 sm:min-h-[600px] lg:min-h-[700px] max-h-[90dvh] bg-card border border-border rounded-[2rem] shadow-2xl overflow-y-auto overscroll-contain lg:overflow-hidden flex flex-col lg:flex-row animate-fade-in">
 
         {/* LEFT: TEXT */}
         <div className="flex-[1] flex flex-col justify-center p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[hsl(var(--primary)/0.15)] bg-[hsl(var(--primary)/0.06)] relative">
-          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm font-bold transition-colors">
+          <button onClick={onClose} className="absolute top-6 left-6 text-muted-foreground hover:text-foreground active:scale-[0.97] flex items-center gap-2 text-sm font-bold transition-all duration-150 ease-out">
             <ArrowLeft className="w-4 h-4" /> Voltar
           </button>
           <div className="mb-10">
@@ -1280,7 +1280,7 @@ const SolutionsSlide = () => {
   const [selectedSolution, setSelectedSolution] = useState<typeof solutionsData[0] | null>(null);
 
   return (
-    <div className="flex-1 w-full min-h-[100dvh] flex flex-col justify-center px-6 md:px-16 pt-20 pb-20 relative">
+    <div className="flex-1 w-full min-h-[100svh] flex flex-col justify-center px-6 md:px-16 pt-20 pb-20 relative">
       <div className="max-w-7xl mx-auto w-full">
 
         <div className="mb-14 text-center md:text-left">
@@ -1304,7 +1304,7 @@ const SolutionsSlide = () => {
               <button
                 key={item.id}
                 onClick={() => setSelectedSolution(item)}
-                className="clean-card w-full p-6 md:p-8 hover:-translate-y-1 hover:border-[hsl(var(--primary)/0.4)] hover:shadow-[0_10px_30px_hsl(var(--primary)/0.1)] group flex flex-col text-left transition-all duration-300"
+                className="clean-card w-full p-6 md:p-8 hover:-translate-y-1 hover:border-[hsl(var(--primary)/0.4)] hover:shadow-[0_10px_30px_hsl(var(--primary)/0.1)] active:scale-[0.98] group flex flex-col text-left transition-all duration-150 ease-out"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary border border-border flex items-center justify-center text-muted-foreground mb-6 group-hover:bg-[hsl(var(--primary)/0.1)] group-hover:border-[hsl(var(--primary)/0.3)] group-hover:text-[hsl(var(--primary))] transition-all duration-500 group-hover:scale-110">
                   <Icon className="w-5 h-5" />
@@ -1318,7 +1318,7 @@ const SolutionsSlide = () => {
                   {item.desc}
                 </p>
 
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-[hsl(var(--primary))] uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300">
+                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-[hsl(var(--primary))] uppercase tracking-wider opacity-100 translate-y-0 [@media(hover:hover)_and_(pointer:fine)]:opacity-0 [@media(hover:hover)_and_(pointer:fine)]:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   Ver demonstração <ChevronRight className="w-3 h-3" />
                 </div>
               </button>

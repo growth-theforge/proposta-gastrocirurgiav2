@@ -15,28 +15,28 @@ const LandingPage = () => {
       <div className="fixed inset-0 dot-pattern pointer-events-none z-0 opacity-40" />
       <div className="fixed inset-0 hero-glow pointer-events-none z-0" />
 
-      {/* ── Sections — each fills exactly 100dvh ── */}
+      {/* ── Sections — each fills at least 100svh on mobile to prevent URL-bar scroll jumps ── */}
       <main className="relative z-10">
 
         {/* 1. Hero */}
-        <section className="min-h-[100dvh] md:h-[100dvh] flex flex-col overflow-hidden">
+        <section className="min-h-[100svh] md:h-[100dvh] flex flex-col overflow-hidden">
           <HeroSlide />
         </section>
 
         {/* 2. Cenário */}
-        <section className="min-h-[100dvh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
+        <section className="min-h-[100svh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
           <CurrentScenarioSlide />
         </section>
 
 
 
         {/* 4. Resultados */}
-        <section className="min-h-[100dvh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
+        <section className="min-h-[100svh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
           <StatsSlide />
         </section>
 
         {/* 5. Soluções — content-driven height */}
-        <section className="min-h-[100dvh] flex flex-col theme-light bg-background text-foreground">
+        <section className="min-h-[100svh] flex flex-col theme-light bg-background text-foreground">
           <SolutionsSlide />
         </section>
 
@@ -46,19 +46,19 @@ const LandingPage = () => {
         </section>
 
         {/* 5.75 Por que Tenaz */}
-        <section className="min-h-[100dvh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
+        <section className="min-h-[100svh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
           <WhyTenazSlide />
         </section>
 
         {/* 6. Investimento */}
-        <section className="min-h-[100dvh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
+        <section className="min-h-[100svh] md:h-[100dvh] flex flex-col md:overflow-hidden theme-light bg-background text-foreground">
           <PricingSlide />
         </section>
 
       </main>
 
       {/* ── Footer ── */}
-      <footer className="relative z-10 theme-light bg-background border-t border-border/40 py-8 text-center">
+      <footer className="relative z-10 theme-light bg-background border-t border-border/40 pt-8 pb-[calc(2rem+env(safe-area-inset-bottom,0px))] text-center">
         <img
           src="/logo-hero.svg"
           alt={CLIENT_NAME}

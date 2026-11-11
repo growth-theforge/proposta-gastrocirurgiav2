@@ -55,7 +55,7 @@ const StatsSlide = () => {
   }, []);
 
   return (
-    <div className="flex-1 w-full min-h-[100dvh] flex flex-col justify-center px-6 md:px-16 py-12 md:py-20 relative">
+    <div className="flex-1 w-full min-h-[100svh] flex flex-col justify-center px-6 md:px-16 py-12 md:py-20 relative">
       <div className="max-w-6xl mx-auto w-full relative z-10">
 
         {/* Header */}

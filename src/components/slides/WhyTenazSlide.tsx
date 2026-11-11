@@ -29,7 +29,7 @@ const features = [
 
 const WhyTenazSlide = () => {
   return (
-    <div className="flex-1 w-full flex flex-col justify-center px-6 md:px-16 py-12 md:py-20 relative min-h-[100dvh]">
+    <div className="flex-1 w-full flex flex-col justify-center px-6 md:px-16 py-12 md:py-20 relative min-h-[100svh]">
       <div className="max-w-6xl mx-auto w-full relative z-10">
         
         {/* Header */}
